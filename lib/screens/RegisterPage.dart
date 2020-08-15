@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:istore/requisities/TextStyles.dart';
 import 'package:istore/screens/LoginPage.dart';
+import 'package:istore/services/authentication.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -11,6 +12,12 @@ class _RegisterPageState extends State<RegisterPage> {
   String email;
   String password;
   String name;
+
+
+  void getUser()
+  {
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,7 +96,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               GestureDetector(
                 onTap: () {
-                  register(email, password, context);
+                  register(name,email, password, context);
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width,
