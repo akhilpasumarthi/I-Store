@@ -44,8 +44,10 @@ void signin(email,password,context)
 async{
   FirebaseAuth _auth= FirebaseAuth.instance;
   try {
+    print(email);
     AuthResult result = await _auth.signInWithEmailAndPassword(email:email, password: password);
     var user = result.user;
+
     if (user != null) {
       print("Welcome To istore");
       FlutterToast.showToast(
@@ -54,14 +56,13 @@ async{
         toastLength: Toast.LENGTH_SHORT,
         timeInSecForIosWeb: 5,
       );
-      data=Firestore.instance.collection("users").document()
       Navigator.pushReplacement((context),MaterialPageRoute(builder:(context)=> ZIPScreen()));
-
     }
   }catch(e)
   {
+    print(e);
     FlutterToast.showToast(
-      msg: e,
+      msg: "unknown error",
       gravity: ToastGravity.BOTTOM,
       toastLength: Toast.LENGTH_SHORT,
       timeInSecForIosWeb: 5,

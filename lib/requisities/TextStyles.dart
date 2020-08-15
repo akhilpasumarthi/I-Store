@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const kHeaderStyle = TextStyle(
   color: Colors.white,
@@ -82,19 +83,9 @@ const List<BottomNavigationBarItem> kNavBarList = [
     backgroundColor: Colors.white,
   ),
   BottomNavigationBarItem(
-    icon: Tab(
-      icon: Image(
-        image: AssetImage('images/profileIcon.png'),
-        height: 30,
-        width: 30,
-      ),
-    ),
-    activeIcon: Tab(
-      icon: Image(
-        image: AssetImage('images/BellIconSelected.png'),
-        height: 30,
-        width: 30,
-      ),
+    icon: Icon(
+      FontAwesomeIcons.user,
+      size: 25,
     ),
     title: Text(''),
     backgroundColor: Colors.white,
