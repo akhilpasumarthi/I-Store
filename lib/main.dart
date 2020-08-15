@@ -3,6 +3,8 @@ import 'package:istore/screens/RegisterPage.dart';
 import 'package:istore/screens/StorePage.dart';
 import 'package:istore/screens/ZIPScreen.dart';
 
+import 'screens/RegisterPage.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: StorePage(),
+      home: RegisterPage(),
     );
   }
 }
